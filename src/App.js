@@ -4,6 +4,7 @@ import './App.css';
 import ListItems from './ListItems'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import ParticlesBg from 'particles-bg';
 
 library.add(faTrash)
 
@@ -55,7 +56,7 @@ class App extends React.Component {
   setUpdate(text,key){
     console.log("items:"+this.state.items);
     const items = this.state.items;
-    items.map(item=>{      
+    items.map(item => {      
       if(item.key===key){
         console.log(item.key +"    "+key)
         item.text= text;
@@ -70,16 +71,18 @@ class App extends React.Component {
  render(){
   return (
     <div className="App">
+        
       <header>
+      
         <form id="to-do-form" onSubmit={this.addItem}>
           <input type="text" placeholder="Enter task" value= {this.state.currentItem.text} onChange={this.handleInput}></input>
           <button type="submit">Add</button>
         </form>
         <p>{this.state.items.text}</p>
-        
           <ListItems items={this.state.items} deleteItem={this.deleteItem} setUpdate={this.setUpdate}/>
         
       </header>
+      <ParticlesBg type="square" bg={true}/>
     </div>
   );
  }

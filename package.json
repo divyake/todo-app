@@ -7,10 +7,12 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.18",
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "particles-bg": "^2.5.0",
     "react": "^16.8.6",
+    "react-background-animation": "^1.0.1",
     "react-dom": "^16.8.6",
     "react-flip-move": "^3.0.3",
-    "react-scripts": "3.0.1",
+    "react-scripts": "^3.4.1",
     "react-transition-group": "^4.1.0"
   },
   "scripts": {
